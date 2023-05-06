@@ -17,6 +17,9 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+        //to remove the toolbar
+        getSupportActionBar().hide();
+
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {

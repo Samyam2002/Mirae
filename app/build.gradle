@@ -17,6 +17,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -43,4 +47,16 @@ dependencies {
 
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // Android Architecture Components
+    def lifecycle_version = "2.6.1"
+    def arch_version = "2.2.0"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    android:orientation="vertical"
+    tools:context=".Activity.InsertTodoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Title..."
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"
+            android:fontFamily="@font/playfair_display_regular"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Subitle..."
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"
+            android:fontFamily="@font/playfair_display_regular"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Task Details..."
+            android:gravity="start"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"
+            android:fontFamily="@font/playfair_display_regular" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/updateTodoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/baseline_done_24"
+        app:backgroundTint="#50A060" />
+
+</RelativeLayout>
