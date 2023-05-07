@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        app:cardCornerRadius="10dp" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:margin="7dp">
+        
+        <TextView
+            android:id="@+id/todoTitle"
+            android:padding="10dp"
+            android:fontFamily="@font/playfair_display_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title" />
+
+        <TextView
+            android:id="@+id/todoSubtitle"
+            android:padding="10dp"
+            android:fontFamily="@font/playfair_display_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="subtitle" />
+
+        <TextView
+            android:id="@+id/todo"
+            android:padding="10dp"
+            android:fontFamily="@font/playfair_display_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="todo" />
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

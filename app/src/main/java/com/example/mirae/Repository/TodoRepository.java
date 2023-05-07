@@ -18,7 +18,7 @@ public class TodoRepository {
     public TodoRepository(Application application){
         TodoDatabase database = TodoDatabase.getDatabaseInstance(application);
         todoDao = database.todoDao();
-        getAllTodo = todoDao.getAllTodos();
+        getAllTodo = todoDao.getAllTodo();
     }
 
     public void insertTodo(Todo todo){

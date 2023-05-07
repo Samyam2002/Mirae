@@ -22,15 +22,15 @@ public class TodoViewModel extends AndroidViewModel {
         getAllTodo = repository.getAllTodo;
     }
 
-    void insertTodos(Todo todo) {
+    public void insertTodos(Todo todo) {
         repository.insertTodo(todo);
     }
 
-    void deleteTodos(int id) {
+    public void deleteTodos(int id) {
         repository.deleteTodo(id);
     }
 
-    void updateTodos(Todo todo) {
+    public void updateTodos(Todo todo) {
         repository.updateTodo(todo);
     }
 }

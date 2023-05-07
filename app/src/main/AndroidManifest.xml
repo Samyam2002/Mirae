@@ -12,10 +12,10 @@
         android:theme="@style/Theme.Mirae"
         tools:targetApi="31">
         <activity
-            android:name=".UpdateTodoActivity"
+            android:name=".Activity.UpdateTodoActivity"
             android:exported="false" />
         <activity
-            android:name=".InsertTodoActivity"
+            android:name=".Activity.InsertTodoActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.SplashScreen"

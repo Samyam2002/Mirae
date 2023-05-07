@@ -20,7 +20,7 @@ public abstract class TodoDatabase extends RoomDatabase {
         if(INSTANCE == null){
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                     TodoDatabase.class,
-                    "Todo_Database").build();
+                    "Todo_Database").allowMainThreadQueries().build();
         }
         return INSTANCE;
     }
