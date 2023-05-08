@@ -41,7 +41,7 @@ public class InsertTodoActivity extends AppCompatActivity {
     private void createTodo(String title, String subtitle, String todo) {
 
         Date date = new Date();
-        CharSequence sequence = DateFormat.format("MMMM d,YYYY", date.getTime());
+        CharSequence sequence = DateFormat.format("MMMM d,yyyy", date.getTime());
 
         Todo todo1 = new Todo();
         todo1.todoTitle = title;

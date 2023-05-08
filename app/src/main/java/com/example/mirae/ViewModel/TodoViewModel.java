@@ -5,6 +5,7 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.example.mirae.MainActivity;
 import com.example.mirae.Model.Todo;
 import com.example.mirae.Repository.TodoRepository;
 
@@ -18,7 +19,7 @@ public class TodoViewModel extends AndroidViewModel {
     public TodoViewModel(Application application) {
         super(application);
 
-        TodoRepository repository = new TodoRepository(application);
+        repository = new TodoRepository(application);
         getAllTodo = repository.getAllTodo;
     }
 
