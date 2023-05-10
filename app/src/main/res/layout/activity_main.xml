@@ -7,8 +7,17 @@
     android:background="#E8E8E8"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/filter"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todoRecycler"
+        android:layout_below="@id/filter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

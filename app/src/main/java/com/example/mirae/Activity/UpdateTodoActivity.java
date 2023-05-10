@@ -5,15 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
+import android.text.Layout;
 import android.text.format.DateFormat;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mirae.Model.Todo;
 import com.example.mirae.R;
 import com.example.mirae.ViewModel.TodoViewModel;
 import com.example.mirae.databinding.ActivityUpdateTodoBinding;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.Date;
 
@@ -114,7 +120,28 @@ public class UpdateTodoActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.delete){
+            BottomSheetDialog sheetDialog = new BottomSheetDialog(UpdateTodoActivity.this, R.style.BottomSheetStyle);
 
+            View view = LayoutInflater.from(UpdateTodoActivity.this).
+                    inflate(R.layout.delete_bottom_sheet,(LinearLayout) findViewById(R.id.bottomSheet));
+
+            sheetDialog.setContentView(view);
+
+            TextView yes, no;
+            yes = view.findViewById(R.id.delete_yes);
+            no = view.findViewById(R.id.delete_no);
+
+            yes.setOnClickListener(v -> {
+                todoViewModel.deleteTodos(iid);
+                finish();
+            });
+
+            no.setOnClickListener(v -> {
+                sheetDialog.dismiss();
+            });
+
+
+            sheetDialog.show();
         }
 
         return true;
