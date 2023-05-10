@@ -35,6 +35,15 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
     @Override
     public void onBindViewHolder(@NonNull TodoViewHolder holder, int position) {
         Todo todos = todo.get(position);
+
+        if(todos.todoPriority.equals("1")){
+            holder.todoPriority.setBackgroundResource(R.drawable.green_shape);
+        } else if (todos.todoPriority.equals("2")) {
+            holder.todoPriority.setBackgroundResource(R.drawable.yellow_shape);
+        } else if(todos.todoPriority.equals("3")){
+            holder.todoPriority.setBackgroundResource(R.drawable.red_shape);
+        }
+
         holder.title.setText(todos.todoTitle);
         holder.subtitle.setText(todos.todoSubtitle);
         holder.todoDate.setText(todos.todoDate);
@@ -46,6 +55,8 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
                 intent.putExtra("id", todos.id);
                 intent.putExtra("title", todos.todoTitle);
                 intent.putExtra("subtitle", todos.todoSubtitle);
+                intent.putExtra("todo", todos.todo);
+                intent.putExtra("priority", todos.todoPriority);
 
                 mainActivity.startActivity(intent);
             }
@@ -60,12 +71,15 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
     static class TodoViewHolder extends RecyclerView.ViewHolder {
 
         TextView title, subtitle, todoDate;
+        View todoPriority;
+
         public TodoViewHolder(@NonNull View itemView) {
             super(itemView);
 
             title = itemView.findViewById(R.id.todoTitle);
             subtitle = itemView.findViewById(R.id.todoSubtitle);
             todoDate = itemView.findViewById(R.id.todoDate);
+            todoPriority = itemView.findViewById(R.id.todoPriority);
         }
     }
 }

@@ -17,6 +17,7 @@ import java.util.Date;
 public class InsertTodoActivity extends AppCompatActivity {
 
     ActivityInsertTodoBinding binding;
+    String priority="1";
     String title, subtitle, todo;
     TodoViewModel todoViewModel;
 
@@ -27,6 +28,30 @@ public class InsertTodoActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         todoViewModel = new ViewModelProvider(this).get(TodoViewModel.class);
+
+        binding.greenPriority.setOnClickListener(v -> {
+            binding.greenPriority.setImageResource(R.drawable.baseline_done_24);
+            binding.yellowPriority.setImageResource(0);
+            binding.redPriority.setImageResource(0);
+
+            priority="1";
+        });
+
+        binding.yellowPriority.setOnClickListener(v -> {
+            binding.yellowPriority.setImageResource(R.drawable.baseline_done_24);
+            binding.greenPriority.setImageResource(0);
+            binding.redPriority.setImageResource(0);
+
+            priority="2";
+        });
+
+        binding.redPriority.setOnClickListener(v -> {
+            binding.redPriority.setImageResource(R.drawable.baseline_done_24);
+            binding.greenPriority.setImageResource(0);
+            binding.yellowPriority.setImageResource(0);
+
+            priority="3";
+        });
 
         //when the doneTodoBtn is clicked
         binding.doneTodoBtn.setOnClickListener(v -> {
@@ -48,11 +73,11 @@ public class InsertTodoActivity extends AppCompatActivity {
         todo1.todoSubtitle = subtitle;
         todo1.todoDate = sequence.toString();
         todo1.todo = todo;
+        todo1.todoPriority = priority;
 
         todoViewModel.insertTodos(todo1);
 
         Toast.makeText(this, "Todo Created Successfully!", Toast.LENGTH_SHORT).show();
-
         finish();
     }
 }

@@ -21,4 +21,7 @@ public class Todo {
 
     @ColumnInfo(name = "todo_date")
     public String todoDate;
+
+    @ColumnInfo(name = "todo_priority")
+    public String todoPriority;
 }

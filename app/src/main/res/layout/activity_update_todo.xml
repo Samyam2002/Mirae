@@ -41,8 +41,50 @@
             android:hint="Subtitle..."
             android:padding="15dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/playfair_display_regular"
+                android:layout_marginRight="10dp"
+                android:text="Priority"/>
+
+            <ImageView
+                android:id="@+id/greenPriority"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/green_shape"/>
+
+            <ImageView
+                android:id="@+id/yellowPriority"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/yellow_shape"/>
+
+            <ImageView
+                android:id="@+id/redPriority"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/red_shape"/>
+
+        </LinearLayout>
+
         <EditText
-            android:id="@+id/upData"
+            android:id="@+id/upTodo"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_marginStart="16dp"
