@@ -15,12 +15,16 @@ public class TodoViewModel extends AndroidViewModel {
 
     public TodoRepository repository;
     public LiveData<List<Todo>> getAllTodo;
+    public LiveData<List<Todo>> hightolow;
+    public LiveData<List<Todo>> lowtohigh;
 
     public TodoViewModel(Application application) {
         super(application);
 
         repository = new TodoRepository(application);
         getAllTodo = repository.getAllTodo;
+        hightolow = repository.hightolow;;
+        lowtohigh = repository.lowtohigh;
     }
 
     public void insertTodos(Todo todo) {

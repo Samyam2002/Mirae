@@ -14,11 +14,15 @@ import java.util.List;
 public class TodoRepository {
     public TodoDao todoDao;
     public LiveData<List<Todo>> getAllTodo;
+    public LiveData<List<Todo>> hightolow;
+    public LiveData<List<Todo>> lowtohigh;
 
     public TodoRepository(Application application){
         TodoDatabase database = TodoDatabase.getDatabaseInstance(application);
         todoDao = database.todoDao();
         getAllTodo = todoDao.getAllTodo();
+        hightolow = todoDao.highToLow();
+        lowtohigh = todoDao.lowToHigh();
     }
 
     public void insertTodo(Todo todo){

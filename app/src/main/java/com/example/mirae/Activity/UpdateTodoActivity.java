@@ -123,7 +123,7 @@ public class UpdateTodoActivity extends AppCompatActivity {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(UpdateTodoActivity.this, R.style.BottomSheetStyle);
 
             View view = LayoutInflater.from(UpdateTodoActivity.this).
-                    inflate(R.layout.delete_bottom_sheet,(LinearLayout) findViewById(R.id.bottomSheet));
+                    inflate(R.layout.delete_bottom_sheet,(LinearLayout)findViewById(R.id.bottomSheet));
 
             sheetDialog.setContentView(view);
 

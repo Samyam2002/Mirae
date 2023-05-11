@@ -15,6 +15,12 @@ public interface TodoDao {
     @Query("SELECT * FROM Todo_Database")
     LiveData<List<Todo>> getAllTodo();
 
+    @Query("SELECT * FROM Todo_Database ORDER BY todo_priority DESC")
+    LiveData<List<Todo>> highToLow();
+
+    @Query("SELECT * FROM Todo_Database ORDER BY todo_priority ASC")
+    LiveData<List<Todo>> lowToHigh();
+
     @Insert
     void insertTodo(Todo... todo);
 

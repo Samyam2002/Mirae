@@ -14,16 +14,24 @@ import com.example.mirae.MainActivity;
 import com.example.mirae.Model.Todo;
 import com.example.mirae.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder> {
 
     MainActivity mainActivity;
     List<Todo> todo;
+    List<Todo> allTodoItem;
 
     public TodoAdapter(MainActivity mainActivity, List<Todo> todo) {
         this.mainActivity=mainActivity;
         this.todo=todo;
+        allTodoItem=new ArrayList<>(todo);
+    }
+
+    public void searchTodo(List<Todo> filteredTodo){
+        this.todo=filteredTodo;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -61,6 +69,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.TodoViewHolder
                 mainActivity.startActivity(intent);
             }
         });
+
     }
 
     @Override
