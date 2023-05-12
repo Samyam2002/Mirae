@@ -30,7 +30,6 @@ public class TodoViewModel extends AndroidViewModel {
     public void insertTodos(Todo todo) {
         repository.insertTodo(todo);
     }
-
     public void deleteTodos(int id) {
         repository.deleteTodo(id);
     }

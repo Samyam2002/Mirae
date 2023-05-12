@@ -1,5 +1,6 @@
 package com.example.mirae;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -9,18 +10,23 @@ import androidx.room.Database;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.example.mirae.Activity.InsertTodoActivity;
+import com.example.mirae.Activity.UpdateTodoActivity;
 import com.example.mirae.Adapter.TodoAdapter;
 import com.example.mirae.Database.TodoDatabase;
 import com.example.mirae.Model.Todo;
 import com.example.mirae.Repository.TodoRepository;
 import com.example.mirae.ViewModel.TodoViewModel;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -154,4 +160,5 @@ public class MainActivity extends AppCompatActivity {
         }
         this.adapter.searchTodo(filterTodo);
     }
+
 }

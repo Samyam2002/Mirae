@@ -24,26 +24,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="7dp">
-        
+
         <TextView
             android:id="@+id/todoTitle"
-            android:padding="10dp"
-            android:fontFamily="@font/playfair_display_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="title" />
+            android:fontFamily="@font/playfair_display_bold"
+            android:padding="10dp"
+            android:text="title"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/todoSubtitle"
-            android:padding="10dp"
-            android:fontFamily="@font/playfair_display_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="subtitle" />
+            android:fontFamily="@font/playfair_display_regular"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="subtitle"
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/todoDate"
-            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:fontFamily="@font/playfair_display_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

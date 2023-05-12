@@ -5,6 +5,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mirae.Model.Todo;
@@ -12,13 +15,14 @@ import com.example.mirae.R;
 import com.example.mirae.ViewModel.TodoViewModel;
 import com.example.mirae.databinding.ActivityInsertTodoBinding;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class InsertTodoActivity extends AppCompatActivity {
 
     ActivityInsertTodoBinding binding;
     String priority="1";
-    String title, subtitle, todo;
+    String title, subtitle, todo, todoDate;
     TodoViewModel todoViewModel;
 
     @Override
@@ -54,12 +58,27 @@ public class InsertTodoActivity extends AppCompatActivity {
         });
 
         //when the doneTodoBtn is clicked
-        binding.doneTodoBtn.setOnClickListener(v -> {
-            title = binding.todoTitle.getText().toString();
-            subtitle = binding.todoSubtitle.getText().toString();
-            todo = binding.todoData.getText().toString();
+        //first, validate whether the fields are empty or not
+        binding.doneTodoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                title = binding.todoTitle.getText().toString();
+                subtitle = binding.todoSubtitle.getText().toString();
+                todo = binding.todoData.getText().toString();
 
-            createTodo(title, subtitle, todo);
+                if (title.equals("")) {
+                    binding.todoTitle.requestFocus();
+                    binding.todoTitle.setError("Title is required");
+                }else if (subtitle.equals("")) {
+                    binding.todoSubtitle.requestFocus();
+                    binding.todoSubtitle.setError("Subtitle Required");
+                }else if (todo.equals("")){
+                    binding.todoData.requestFocus();
+                    binding.todoData.setError("Description is required");
+                }else{
+                    createTodo(title, subtitle, todo);
+                }
+            }
         });
     }
 

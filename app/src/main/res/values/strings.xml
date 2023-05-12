@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mirae</string>
+    <string name="edit_date" />
 </resources>

@@ -38,7 +38,7 @@
             android:layout_marginRight="16dp"
             android:background="@drawable/edit_text_bg"
             android:fontFamily="@font/playfair_display_regular"
-            android:hint="Subtitle..."
+            android:hint="Imp Info..."
             android:padding="15dp" />
 
         <LinearLayout
