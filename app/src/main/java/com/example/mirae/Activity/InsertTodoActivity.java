@@ -22,7 +22,7 @@ public class InsertTodoActivity extends AppCompatActivity {
 
     ActivityInsertTodoBinding binding;
     String priority="1";
-    String title, subtitle, todo, todoDate;
+    String title, subtitle, todo;
     TodoViewModel todoViewModel;
 
     @Override
@@ -66,18 +66,7 @@ public class InsertTodoActivity extends AppCompatActivity {
                 subtitle = binding.todoSubtitle.getText().toString();
                 todo = binding.todoData.getText().toString();
 
-                if (title.equals("")) {
-                    binding.todoTitle.requestFocus();
-                    binding.todoTitle.setError("Title is required");
-                }else if (subtitle.equals("")) {
-                    binding.todoSubtitle.requestFocus();
-                    binding.todoSubtitle.setError("Subtitle Required");
-                }else if (todo.equals("")){
-                    binding.todoData.requestFocus();
-                    binding.todoData.setError("Description is required");
-                }else{
-                    createTodo(title, subtitle, todo);
-                }
+                createTodo(title, subtitle, todo);
             }
         });
     }
