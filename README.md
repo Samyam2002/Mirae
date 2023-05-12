@@ -1,10 +1,9 @@
 # Mirae 
 
-## Mirae App In Action
-Mirae is a simple Todo application that lets users to create, update or delete todo list 
+## Introduction
+Mirae is a simple Todo application that lets users create, update or delete todo list 
 as well as sort them on the basis of priority. The app also provides a search menu to 
-search for the list based on either the title or subtitle.
-[[keep the live gif file of it working]]
+search for the list based on either title or subtitle.
 
 ## MVVM Architecture
 My Android application adheres to the MVVM architectural pattern, which helps organize the 
@@ -30,7 +29,7 @@ mixed up and become hard to work with.
 #### Delete a todo item
 ![git](./img/delete_todo.gif)
 
-#### Persistence
+#### Persistence of Data
 ![git](./img/persistence.gif)
 
 #### Rotation Fix
