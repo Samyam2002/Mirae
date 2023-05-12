@@ -13,32 +13,32 @@ mixed up and become hard to work with.
 
 ![git](./img/MVVM.png)
 
-Folder Structure of Mirae App
+### Folder Structure of Mirae App
 ![git](./img/MVVM_architecture_in_Mirae_App.PNG)
 
 ## Features of Mirae App
 ### Basic Features
-Splash Screen
+#### Splash Screen
 ![git](./img/splashscreen.gif)
 
-Add a todo item
+#### Add a todo item
 ![git](./img/insert_todo.gif)
 
-Update a todo item
+#### Update a todo item
 ![git](./img/update_todo.gif)
 
-Delete a todo item
+#### Delete a todo item
 ![git](./img/delete_todo.gif)
 
-Persistence
+#### Persistence
 ![git](./img/persistence.gif)
 
-Rotation Fix
+#### Rotation Fix
 ![git](./img/rotation_fix.gif)
 
 ### Additional Features
-Search on the basis of Title or Subtitle
+#### Search on the basis of Title or Subtitle
 ![git](./img/search_todo.gif)
 
-Sort on the basis of priority
+#### Sort on the basis of priority
 ![git](./img/sort_todo.gif)
